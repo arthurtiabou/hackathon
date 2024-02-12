@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <title>Notation du site</title>
+</head>
+
+<body>
+    <div class=" mt-3">
+
+        <div class="form-group">
+            <h2 style="text-align: center;">Aucun sites n'est parfait ! </h2>
+        </div>
+
+        <div class="row" style="padding: 20px;">
+            <div class="col-8">
+                <form id="urlForm" class="mt-3">
+                    <div class="mb-3 d-flex align-items-center">
+                        <label for="urlInput" class="form-label me-2">Entrez l'URL :</label>
+                        <input type="text" id="urlInput" class="form-control" placeholder="Entrez l'URL complète">
+                        <button type="button" class="btn btn-primary ms-2" onclick="loadPageContent()">Afficher</button>
+                    </div>
+                </form>
+
+                <div id="contentContainer" class="mt-4"
+                    style="max-height: 700px; min-height: 500px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;border-radius: 5px;">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="form-group">
+                    <h3>Listes des critères </h3>
+                </div>
+
+                <div id="totalScoreDisplay" class="float-right mt-3 mr-3 " style="max-height: 700px; overflow-y: auto;">
+                </div>
+
+                <form id="ratingForm" style="max-height: 500px; overflow-y: auto;">
+                    <!-- Le contenu du formulaire sera généré dynamiquement ici -->
+
+                </form>
+
+                <!-- Ajouter les classes Bootstrap pour aligner le bouton et les notes sur la même ligne -->
+                <div class="d-flex justify-content-between mt-3 mb-3">
+
+                    <div class="text-left">
+                        NOTE
+                        <div id="totalScore" class="mb-3"></div>
+                    </div>
+                    <button type="button" class="btn btn-success" onclick="generatePDF()">Générer PDF</button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <!-- index.html -->
+</body>
+
+</html>
